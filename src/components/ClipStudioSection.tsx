@@ -391,7 +391,7 @@ export const ClipStudioSection: React.FC<ClipStudioSectionProps> = ({
 
   const loadCustomFontFace = (name: string, url: string) => {
     try {
-      const font = new FontFace(name, `url(${url})`);
+      const font = new FontFace(name, `url("${encodeURI(url)}")`);
       font.load().then(loaded => {
         (document.fonts as Set<FontFace>).add(loaded);
       }).catch(err => console.warn(`Font '${name}' load error:`, err));
