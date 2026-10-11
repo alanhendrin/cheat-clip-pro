@@ -247,7 +247,8 @@ async function start() {
     'uvicorn',
     'backend.main:app',
     '--host',
-    '0.0.0.0',
+    // Local-only by default; set HOST=0.0.0.0 to expose the API on the network.
+    process.env.HOST || '127.0.0.1',
     '--port',
     '8000',
     '--reload',
