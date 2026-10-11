@@ -153,3 +153,6 @@ $RECYCLE.BIN/
 *.key
 *.p12
 *.pfx
+
+# MCP server saved analyses
+mcp_server/analyses/

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cheat-clip-pro": {
+      "command": "venv/Scripts/python.exe",
+      "args": ["mcp_server/server.py"]
+    }
+  }
+}
